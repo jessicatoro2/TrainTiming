@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
+
+
+		<!--Bootstraps jquery CDN-->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!--This is the link to the styles and reset-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+		<!--<link rel="stylesheet" href="assets/css/swashOut.css">-->
+
+		<!-- Libraries -->
+		<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  		<script src="assets/javascript/javascript.js"></script>
+
+
+	</head>
+	<body>
+
+		<div class="container-fluid">	
+			<!--Header with number that needs to be reached-->		
+			<div class="jumbotron text-center">
+				<h1>Train Schedule</h1>
+				<p>Where you need to go, when you need it</p>
+			</div>
+		</div>
+
+		<!-- -->
+		<div class="container">		
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span id="caldendarIcon"aria-hidden="true"></span>Current Train Schedule</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="schedule-div">
+							<div class="container">
+								<table class="table" id="myTable">
+									<thead>
+										<tr>
+											<th>Train Name</th>
+											<th>Destination</th>
+											<th>Frequency (min)</th>
+											<th>Next Arrival</th>
+											<th>Minutes Away</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr id="myTable">
+											<td id="nameText"></td>
+											<td id="placeText"></td>
+											<td id="frequencyText"></td>
+											<td id="nextText"></td>
+											<td id="minuesaway"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">		
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span id="listIcon" aria-hidden="true"></span>Add Trian</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group">
+							<label for="usr">Train Name</label>
+							<input type="text" class="form-control" id="trainname-input">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Destination</label>
+							<input class="form-control" id="destination-input">
+						</div>
+						<div class="form-group">
+							<label for="pwd">First Trian (HH:mm -Military time)</label>
+							<input class="form-control" id="trainTime-input">
+						</div>
+						<div class="form-group"> 
+							<label for="pwd">Frequencey (min)</label>
+							<input class="form-control" id="numberOfMinsNext-input">
+						</div>
+
+						<button type="button" class="btn btn-default search"><span id="searchIcon" aria-hidden="true"></span>Submit</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

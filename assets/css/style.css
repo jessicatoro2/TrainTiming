@@ -1,0 +1,44 @@
+.jumbotron {
+	background: black;
+	color: white;
+	background: none;
+}
+
+body{
+	background-image: url("../images/pexels-photo-234507.jpeg");
+	background-attachment: fixed;
+
+}
+
+#newsIcon {
+	color: white;
+	font-size: 100px;
+}
+
+.form-group{
+	padding: 0px 20px;
+}
+
+
+span {
+	padding: 5px;
+
+}
+
+.search{
+	padding: 5px;
+	margin-left:20px;
+	text-align: center;
+
+}
+
+.panel-default>.panel-heading {
+	background-color: #f1663d;
+	color: white;
+}
+
+.btn-default{
+	background-color: #f1663d
+
+}
+
